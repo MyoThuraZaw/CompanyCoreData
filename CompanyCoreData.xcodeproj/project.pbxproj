@@ -8,24 +8,26 @@
 
 /* Begin PBXBuildFile section */
 		E3BD31A523029CE6000C81EB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3BD31A423029CE6000C81EB /* AppDelegate.swift */; };
-		E3BD31A723029CE6000C81EB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3BD31A623029CE6000C81EB /* ViewController.swift */; };
+		E3BD31A723029CE6000C81EB /* CompaniesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3BD31A623029CE6000C81EB /* CompaniesController.swift */; };
 		E3BD31AA23029CE6000C81EB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E3BD31A823029CE6000C81EB /* Main.storyboard */; };
 		E3BD31AC23029CE7000C81EB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E3BD31AB23029CE7000C81EB /* Assets.xcassets */; };
 		E3BD31AF23029CE7000C81EB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E3BD31AD23029CE7000C81EB /* LaunchScreen.storyboard */; };
 		E3BD31B72302A41C000C81EB /* CustomNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3BD31B62302A41C000C81EB /* CustomNavigationController.swift */; };
 		E3BD31B92302B129000C81EB /* UIColor+theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3BD31B82302B129000C81EB /* UIColor+theme.swift */; };
+		E3BD31BB2302BE0E000C81EB /* Company.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3BD31BA2302BE0E000C81EB /* Company.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		E3BD31A123029CE6000C81EB /* CompanyCoreData.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CompanyCoreData.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E3BD31A423029CE6000C81EB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		E3BD31A623029CE6000C81EB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		E3BD31A623029CE6000C81EB /* CompaniesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompaniesController.swift; sourceTree = "<group>"; };
 		E3BD31A923029CE6000C81EB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E3BD31AB23029CE7000C81EB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E3BD31AE23029CE7000C81EB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E3BD31B023029CE7000C81EB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E3BD31B62302A41C000C81EB /* CustomNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavigationController.swift; sourceTree = "<group>"; };
 		E3BD31B82302B129000C81EB /* UIColor+theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+theme.swift"; sourceTree = "<group>"; };
+		E3BD31BA2302BE0E000C81EB /* Company.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Company.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,13 +61,14 @@
 			isa = PBXGroup;
 			children = (
 				E3BD31A423029CE6000C81EB /* AppDelegate.swift */,
-				E3BD31A623029CE6000C81EB /* ViewController.swift */,
+				E3BD31A623029CE6000C81EB /* CompaniesController.swift */,
 				E3BD31A823029CE6000C81EB /* Main.storyboard */,
 				E3BD31AB23029CE7000C81EB /* Assets.xcassets */,
 				E3BD31AD23029CE7000C81EB /* LaunchScreen.storyboard */,
 				E3BD31B023029CE7000C81EB /* Info.plist */,
 				E3BD31B62302A41C000C81EB /* CustomNavigationController.swift */,
 				E3BD31B82302B129000C81EB /* UIColor+theme.swift */,
+				E3BD31BA2302BE0E000C81EB /* Company.swift */,
 			);
 			path = CompanyCoreData;
 			sourceTree = "<group>";
@@ -143,7 +146,8 @@
 			files = (
 				E3BD31B72302A41C000C81EB /* CustomNavigationController.swift in Sources */,
 				E3BD31B92302B129000C81EB /* UIColor+theme.swift in Sources */,
-				E3BD31A723029CE6000C81EB /* ViewController.swift in Sources */,
+				E3BD31A723029CE6000C81EB /* CompaniesController.swift in Sources */,
+				E3BD31BB2302BE0E000C81EB /* Company.swift in Sources */,
 				E3BD31A523029CE6000C81EB /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

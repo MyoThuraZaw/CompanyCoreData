@@ -8,8 +8,14 @@
 
 import UIKit
 
-class ViewController: UITableViewController {
+class CompaniesController: UITableViewController {
 
+    let companies = [
+        Company(name: "Apple", founded: Date()),
+        Company(name: "Google", founded: Date()),
+        Company(name: "Facebook", founded: Date())
+    ]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -28,7 +34,7 @@ class ViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 8
+        return companies.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -36,7 +42,9 @@ class ViewController: UITableViewController {
         
         cell.backgroundColor = .tealColor
         
-        cell.textLabel?.text = "THE COMPANY NAME"
+        let company = companies[indexPath.row].name
+        
+        cell.textLabel?.text = company
         cell.textLabel?.textColor = .white
         cell.textLabel?.font = UIFont.boldSystemFont(ofSize: 16)
         
