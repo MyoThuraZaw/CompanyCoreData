@@ -18,6 +18,7 @@ class ViewController: UITableViewController {
         tableView.backgroundColor = .darkBlue
         
 //        tableView.separatorStyle = .none
+        tableView.separatorColor = .white
         
         tableView.tableFooterView = UIView()
        
@@ -36,8 +37,20 @@ class ViewController: UITableViewController {
         cell.backgroundColor = .tealColor
         
         cell.textLabel?.text = "THE COMPANY NAME"
+        cell.textLabel?.textColor = .white
+        cell.textLabel?.font = UIFont.boldSystemFont(ofSize: 16)
         
         return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let view = UIView()
+        view.backgroundColor = .lightBlue
+        return view
+    }
+    
+    override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 50
     }
     
     func setupNavigationStyle() {
