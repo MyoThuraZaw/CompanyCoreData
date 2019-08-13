@@ -30,7 +30,9 @@ class CompaniesController: UITableViewController {
        
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cellId")
         
-        setupNavigationStyle()
+        navigationItem.title = "Companies"
+        navigationItem.rightBarButtonItem = UIBarButtonItem(image: #imageLiteral(resourceName: "plus").withRenderingMode(.alwaysOriginal), style: .plain, target: self, action: #selector(handleAddCompany))
+        
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -61,19 +63,14 @@ class CompaniesController: UITableViewController {
         return 50
     }
     
-    func setupNavigationStyle() {
-        navigationItem.title = "Companies"
-        navigationItem.rightBarButtonItem = UIBarButtonItem(image: #imageLiteral(resourceName: "plus").withRenderingMode(.alwaysOriginal), style: .plain, target: self, action: #selector(handleAddCompany))
-        
-        navigationController?.navigationBar.isTranslucent = false
-        navigationController?.navigationBar.barTintColor = .lightRed
-        navigationController?.navigationBar.prefersLargeTitles = true
-        navigationController?.navigationBar.largeTitleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
-        navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
-    }
-    
     @objc func handleAddCompany() {
         print("Adding company...")
+        
+        let createCompanyController = CreateCompanyController()
+        
+        let navController = UINavigationController(rootViewController: createCompanyController)
+        
+        present(navController, animated: true, completion: nil)
     }
     
 }
