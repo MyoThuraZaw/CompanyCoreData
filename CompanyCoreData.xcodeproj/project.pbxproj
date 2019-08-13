@@ -13,6 +13,7 @@
 		E3BD31AC23029CE7000C81EB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E3BD31AB23029CE7000C81EB /* Assets.xcassets */; };
 		E3BD31AF23029CE7000C81EB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E3BD31AD23029CE7000C81EB /* LaunchScreen.storyboard */; };
 		E3BD31B72302A41C000C81EB /* CustomNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3BD31B62302A41C000C81EB /* CustomNavigationController.swift */; };
+		E3BD31B92302B129000C81EB /* UIColor+theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3BD31B82302B129000C81EB /* UIColor+theme.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		E3BD31AE23029CE7000C81EB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E3BD31B023029CE7000C81EB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E3BD31B62302A41C000C81EB /* CustomNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavigationController.swift; sourceTree = "<group>"; };
+		E3BD31B82302B129000C81EB /* UIColor+theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+theme.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				E3BD31AD23029CE7000C81EB /* LaunchScreen.storyboard */,
 				E3BD31B023029CE7000C81EB /* Info.plist */,
 				E3BD31B62302A41C000C81EB /* CustomNavigationController.swift */,
+				E3BD31B82302B129000C81EB /* UIColor+theme.swift */,
 			);
 			path = CompanyCoreData;
 			sourceTree = "<group>";
@@ -139,6 +142,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E3BD31B72302A41C000C81EB /* CustomNavigationController.swift in Sources */,
+				E3BD31B92302B129000C81EB /* UIColor+theme.swift in Sources */,
 				E3BD31A723029CE6000C81EB /* ViewController.swift in Sources */,
 				E3BD31A523029CE6000C81EB /* AppDelegate.swift in Sources */,
 			);
