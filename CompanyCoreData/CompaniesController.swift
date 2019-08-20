@@ -8,17 +8,37 @@
 
 import UIKit
 
-class CompaniesController: UITableViewController {
+class CompaniesController: UITableViewController, CreateCompanyControllerDelegate {
+    func didAddCompany(company: Company) {
+        // 1 - modify your array
+        companies.append(company)
+        
+        // 2 - insert a new index path into tableView
+        let newIndexPath = IndexPath(row: companies.count - 1, section: 0)
+        tableView.insertRows(at: [newIndexPath], with: .automatic)
+    }
+    
 
-    let companies = [
+    var companies = [
         Company(name: "Apple", founded: Date()),
         Company(name: "Google", founded: Date()),
         Company(name: "Facebook", founded: Date())
     ]
     
+    func addCompany(company: Company) {
+        
+        // 1 - modify your array
+        companies.append(company)
+        
+        // 2 - insert a new index path into tableView
+        let newIndexPath = IndexPath(row: companies.count - 1, section: 0)
+        tableView.insertRows(at: [newIndexPath], with: .automatic)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
+//        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "TEST ADD", style: .plain, target: self, action: #selector(addCompany))
         view.backgroundColor = .white
         
         tableView.backgroundColor = .darkBlue
@@ -69,8 +89,12 @@ class CompaniesController: UITableViewController {
         let createCompanyController = CreateCompanyController()
         
         let navController = CustomNavigationController(rootViewController: createCompanyController)
+
+//        createCompanyController.companiesController = self
+        createCompanyController.delegate = self
         
         present(navController, animated: true, completion: nil)
+//        navigationController?.pushViewController(createCompanyController, animated: true)
     }
     
 }
