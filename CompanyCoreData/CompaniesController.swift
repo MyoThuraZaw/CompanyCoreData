@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 class CompaniesController: UITableViewController, CreateCompanyControllerDelegate {
     func didAddCompany(company: Company) {
@@ -17,28 +18,51 @@ class CompaniesController: UITableViewController, CreateCompanyControllerDelegat
         let newIndexPath = IndexPath(row: companies.count - 1, section: 0)
         tableView.insertRows(at: [newIndexPath], with: .automatic)
     }
-    
 
-    var companies = [
-        Company(name: "Apple", founded: Date()),
-        Company(name: "Google", founded: Date()),
-        Company(name: "Facebook", founded: Date())
-    ]
+    var companies = [Company]() // empty array
     
-    func addCompany(company: Company) {
+    
+//    func addCompany(company: Company) {
+//
+//        // 1 - modify your array
+//        companies.append(company)
+//
+//        // 2 - insert a new index path into tableView
+//        let newIndexPath = IndexPath(row: companies.count - 1, section: 0)
+//        tableView.insertRows(at: [newIndexPath], with: .automatic)
+//    }
+    
+    private func fetchCompanies() {
+        // attempt my core data fetch somehow...
+        let persistentContainer = NSPersistentContainer(name: "CompanyModels")
+        persistentContainer.loadPersistentStores { (storeDescription, err) in
+            if let err = err {
+                fatalError("Loading of store failed: \(err)")
+            }
+        }
         
-        // 1 - modify your array
-        companies.append(company)
+        let context = persistentContainer.viewContext
         
-        // 2 - insert a new index path into tableView
-        let newIndexPath = IndexPath(row: companies.count - 1, section: 0)
-        tableView.insertRows(at: [newIndexPath], with: .automatic)
+        let fetchRequest = NSFetchRequest<Company>(entityName: "Company")
+        
+        do {
+            let companies = try context.fetch(fetchRequest)
+            
+            companies.forEach { (company) in
+                print(company.name ?? "")
+            }
+            
+        } catch let fetchErr {
+            print("Failed to fetch companies:", fetchErr)
+        }
+        
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-//        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "TEST ADD", style: .plain, target: self, action: #selector(addCompany))
+        fetchCompanies()
+        
         view.backgroundColor = .white
         
         tableView.backgroundColor = .darkBlue

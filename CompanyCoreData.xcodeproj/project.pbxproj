@@ -15,6 +15,7 @@
 		E3BD31B72302A41C000C81EB /* CustomNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3BD31B62302A41C000C81EB /* CustomNavigationController.swift */; };
 		E3BD31B92302B129000C81EB /* UIColor+theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3BD31B82302B129000C81EB /* UIColor+theme.swift */; };
 		E3BD31BB2302BE0E000C81EB /* Company.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3BD31BA2302BE0E000C81EB /* Company.swift */; };
+		E3BF02E4230CA5B1000F9DB3 /* CompanyModels.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E3BF02E2230CA5B1000F9DB3 /* CompanyModels.xcdatamodeld */; };
 		E3F3C75D2302D50E00E45475 /* CreateCompanyController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3F3C75C2302D50E00E45475 /* CreateCompanyController.swift */; };
 /* End PBXBuildFile section */
 
@@ -29,6 +30,7 @@
 		E3BD31B62302A41C000C81EB /* CustomNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavigationController.swift; sourceTree = "<group>"; };
 		E3BD31B82302B129000C81EB /* UIColor+theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+theme.swift"; sourceTree = "<group>"; };
 		E3BD31BA2302BE0E000C81EB /* Company.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Company.swift; sourceTree = "<group>"; };
+		E3BF02E3230CA5B1000F9DB3 /* CompanyModels.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CompanyModels.xcdatamodel; sourceTree = "<group>"; };
 		E3F3C75C2302D50E00E45475 /* CreateCompanyController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateCompanyController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -72,6 +74,7 @@
 				E3BD31B82302B129000C81EB /* UIColor+theme.swift */,
 				E3BD31BA2302BE0E000C81EB /* Company.swift */,
 				E3F3C75C2302D50E00E45475 /* CreateCompanyController.swift */,
+				E3BF02E2230CA5B1000F9DB3 /* CompanyModels.xcdatamodeld */,
 			);
 			path = CompanyCoreData;
 			sourceTree = "<group>";
@@ -153,6 +156,7 @@
 				E3BD31BB2302BE0E000C81EB /* Company.swift in Sources */,
 				E3BD31A523029CE6000C81EB /* AppDelegate.swift in Sources */,
 				E3F3C75D2302D50E00E45475 /* CreateCompanyController.swift in Sources */,
+				E3BF02E4230CA5B1000F9DB3 /* CompanyModels.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -350,6 +354,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		E3BF02E2230CA5B1000F9DB3 /* CompanyModels.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				E3BF02E3230CA5B1000F9DB3 /* CompanyModels.xcdatamodel */,
+			);
+			currentVersion = E3BF02E3230CA5B1000F9DB3 /* CompanyModels.xcdatamodel */;
+			path = CompanyModels.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = E3BD319923029CE6000C81EB /* Project object */;
 }
